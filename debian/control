@@ -1,0 +1,18 @@
+Source: consul-template
+Section: utils
+Priority: optional
+Maintainer: Lance Linder <llinder@gmail.com>
+Homepage: https://github.com/hashicorp/consul-template
+Vcs-Git: https://github.com/hashicorp/consul-template.git
+Vcs-Browser: https://github.com/hashicorp/consul-template
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9), golang-go (>= 2:1.2), git
+
+Package: consul-template
+Architecture: any
+Suggests: consul
+Depends: ${misc:Depends}
+Description: Provides a way to populate values from Consul
+ This project provides a convenient way to populate values from Consul into the filesystem using the consul-template daemon.
+ .
+ The daemon consul-template queries a Consul instance and updates any number of specified templates on the filesystem. As an added bonus, consul-template can optionally run arbitrary commands when the update process completes. See the Examples section for some scenarios were this functionality might prove useful.

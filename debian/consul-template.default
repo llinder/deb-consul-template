@@ -1,0 +1,11 @@
+# This file can be used to change the arguments
+# passed to the consul template.
+
+# Consul Template config directory. Defaults to /etc/consul-template.d
+#CONFIG_DIR=
+
+# Consul Template log file. Defaults to /var/log/consul-template.log
+#LOG_DIR=
+
+# Optional Consul Template flags
+#CONSUL_TEMPLATE_FLAGS=

@@ -1,0 +1,28 @@
+description "Consul Template"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+
+script
+
+  # set default env variables
+  LOG_FILE='/var/log/consul-template.log'
+  CONFIG_DIR='/etc/consul-template/conf.d'
+
+  # Allow overriding env vars in /etc/default/consul-template
+  if [ -f "/etc/default/consul-template" ]; then
+    . /etc/default/consul-template
+  fi
+
+  FLAGS=$CONSUL_TEMPLATE_FLAGS
+
+  # add config directory if defined
+  if [ -z "$(find $CONFIG_DIR -prune -empty)"]; then
+    FLAGS="$FLAGS -config $CONFIG_DIR"
+  fi
+  
+  exec /usr/bin/consul-template $FLAGS >> $LOG_FILE 2>&1
+
+end script
