@@ -11,7 +11,7 @@ Build-Depends: debhelper (>= 9), golang-go (>= 2:1.2), git
 Package: consul-template
 Architecture: any
 Suggests: consul
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, consul
 Description: Provides a way to populate values from Consul
  This project provides a convenient way to populate values from Consul into the filesystem using the consul-template daemon.
  .

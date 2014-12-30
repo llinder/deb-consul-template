@@ -1,3 +1,12 @@
+consul-template (0.5.1-1~trusty1~ppa1) trusty; urgency=low
+
+  * New upstream release.
+  * Updated dependencies to include consul or etcd
+  * Updated upstart script to start after consul or etcd
+
+ -- Lance Linder <llinder@gmail.com>  Thu, 30 Dec 2014 11:50:00 -0500
+
+
 consul-template (0.4.0-1~trusty1~ppa1) trusty; urgency=low
 
   * New upstream release.
